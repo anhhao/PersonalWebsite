@@ -1,0 +1,108 @@
+body {
+    background-color: #EAE5E5;
+    width: 960px;
+    height: auto;
+    margin: auto;
+}
+
+/*name*/
+#name {
+    width: 400px;
+    float: left;
+    color: #4D4D4D;
+    line-height: 5px;
+    font-weight: bold;
+}
+
+#name .fullName {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/*menu*/
+#menu ul {
+    width: 300px;
+    float: left;
+    list-style-type: none;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#menu a {
+    float: left;
+    text-decoration: none;
+    color: #8B8B8B;
+    background-color: transparent;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+#menu a:hover {
+    color: #61D0D4;
+}
+
+#menu li {
+    display: inline;
+}
+
+/*timeline*/
+#timeline {
+    width: 960px;
+    height: 400px;
+    float: left;
+    margin-top: 30px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#avatar {
+    float: left;
+    height: 400px;
+    width: 300px;
+}
+
+#avatar img {
+    width: 300px;
+    height: 300px;
+}
+
+#line {
+    float: left;
+    height: 400px;
+    width: 600px;
+    background-image: url("images/arrow.png");
+    background-position: center;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+#line img {
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    border: 5px solid #eee;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+#line_text {
+    float: left;
+    height: 400px;
+    width: 300px;
+}
+
+#line_text p {
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4D4D4D;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
