@@ -1,5 +1,8 @@
 body {
     background-color: #EAE5E5;
+}
+
+#container {
     width: 960px;
     height: auto;
     margin: auto;
@@ -19,6 +22,7 @@ body {
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'kaushan_scriptregular';
     src: url('fonts/kaushanscript-regular-webfont.eot');
@@ -31,6 +35,7 @@ body {
     font-style: normal;
 
 }
+
 /*name*/
 #name {
     width: 400px;
@@ -44,6 +49,11 @@ body {
     font-size: 2.5em;
     font-weight: bold;
     font-family: kaushan_scriptregular;
+}
+
+#name a {
+    text-decoration: none;
+    color: #4D4D4D;
 }
 
 /*menu*/
@@ -65,7 +75,7 @@ body {
 }
 
 #menu a:hover {
-    color: #61D0D4;
+    color: #E83556;
 }
 
 #menu li {
@@ -132,34 +142,41 @@ body {
     transform: translateX(-50%);
 }
 
-.center_horizontal{
+.center_horizontal {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*Slogan*/
 #slogan {
     height: 100px;
     width: 960px;
     margin-top: 100px;
     float: left;
 }
-#slogan p{
+
+#slogan p {
     float: left;
     font-family: arizoniaregular;
     font-size: 4em;
+    color: #4D4D4D;
 }
-#slogan hr {
+
+/*resume*/
+#resume-hr {
     float: left;
-    width: 500px;
-    margin-right: 400px;
+    width: 960px;
     padding: 0;
     border: none;
-    border-top: medium double #333;
-    color: #333;
+    border-top: medium double #4D4D4D;
+    color: #4D4D4D;
     text-align: center;
+    margin-top: 200px;
 }
-#slogan hr:after {
-    content: "<>";
+
+#resume-hr:after {
+    content: "Resume";
     display: inline-block;
     position: relative;
     top: -0.7em;
@@ -168,3 +185,206 @@ body {
     background: #EAE5E5;
 }
 
+#resume {
+    width: 960px;
+    margin-top: 50px;
+    float: left;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 150px;
+    text-align: center;
+    background: #8B8B8B;
+    margin-bottom: 40px;
+}
+
+#resume a {
+    text-decoration: none;
+}
+
+#resume-menu {
+    width: 230px;
+    float: left;
+}
+
+#resume-edu {
+    width: 700px;
+    float: left;
+    margin-top: 150px;
+}
+
+#resume-exp {
+    width: 700px;
+    float: left;
+    margin-top: 150px;
+}
+
+#resume-ski {
+    width: 700px;
+    float: left;
+    margin-top: 60px;
+}
+
+#resume-ski hr {
+    margin-left: 40px;
+    margin-right: 150px;
+}
+
+.hide {
+    display: none;
+}
+
+.resume-row {
+    margin: 0;
+    padding: 10px 40px;
+    list-style: none;
+    width: 700px;
+}
+
+.resume-row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.resume-row li {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+.resume-row-col2 {
+    min-width: 54px;
+    text-align: left;
+    width: 16%;
+}
+
+.resume-row-col1 {
+    width: 50%;
+    min-width: 160px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 3px;
+    color: #4D4D4D;
+}
+
+.resume-row-subtitle {
+    color: #858585;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.resume-row-col2 {
+    width: 50%;
+    min-width: 160px;
+    font-size: 18px;
+    font-weight: normal;
+    padding-top: 3px;
+    color: #4D4D4D;
+}
+
+/*contact*/
+#contact-hr {
+    float: left;
+    width: 960px;
+    padding: 0;
+    border: none;
+    border-top: medium double #4D4D4D;
+    color: #4D4D4D;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#contact-hr:after {
+    content: "Contact";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #EAE5E5;
+}
+
+#contact {
+    width: 960px;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.contact-form {
+    max-width: 600px;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.contact-form label > span {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea, .contact-form select {
+    color: #555;
+    height: 30px;
+    line-height: 15px;
+    width: 600px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    border: 1px solid #E5E5E5;
+    background: #FBFBFB;
+    font: normal 14px/14px Arial, Helvetica, sans-serif;
+}
+
+.contact-form textarea {
+    height: 100px;
+    padding-top: 10px;
+}
+
+.contact-form .button {
+    background-color: #E83556;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+
+.contact-form .button:hover {
+    background-color: #972840;
+}
+
+/*footer*/
+#footer {
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-color: #E83556;
+    text-align: center;
+}
+
+#footer-content {
+    width: 200px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+#footer-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

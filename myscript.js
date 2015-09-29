@@ -75,3 +75,38 @@ function changeBorderColor(position) {
         }
     }
 }
+
+//resume onclick
+var menu_edu = document.getElementById("resume-menu-edu");
+var menu_exp = document.getElementById("resume-menu-exp");
+var menu_ski = document.getElementById("resume-menu-ski");
+var edu = document.getElementById("resume-edu");
+var exp = document.getElementById("resume-exp");
+var ski = document.getElementById("resume-ski");
+
+menu_edu.style.backgroundColor = "#E83556";
+
+menu_edu.onclick = function () {
+    menu_edu.style.backgroundColor = "#E83556";
+    menu_exp.style.backgroundColor = "#8B8B8B";
+    menu_ski.style.backgroundColor = "#8B8B8B";
+    edu.style.display = "block";
+    exp.style.display = "none";
+    ski.style.display = "none";
+}
+menu_exp.onclick = function () {
+    menu_exp.style.backgroundColor = "#E83556";
+    menu_edu.style.backgroundColor = "#8B8B8B";
+    menu_ski.style.backgroundColor = "#8B8B8B";
+    exp.style.display = "block";
+    edu.style.display = "none";
+    ski.style.display = "none";
+}
+menu_ski.onclick = function () {
+    menu_ski.style.backgroundColor = "#E83556";
+    menu_exp.style.backgroundColor = "#8B8B8B";
+    menu_edu.style.backgroundColor = "#8B8B8B";
+    ski.style.display = "block";
+    exp.style.display = "none";
+    edu.style.display = "none";
+}
