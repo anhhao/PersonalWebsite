@@ -13,26 +13,38 @@ for (var i = 0; i < numOfImage; i++) {
 }
 
 // start timer
-window.setInterval(function () {
+var intervalID = window.setInterval(function () {
     myTimer()
 }, 2000);
 
 //set onclick event to images
-arrImg[0].onclick = function () {
+arrImg[0].addEventListener("click", function () {
     currentIndex = 1;
     myTimer();
     changeBorderColor(0);
-};
-arrImg[1].onclick = function () {
+    window.clearInterval(intervalID);
+    intervalID = window.setInterval(function () {
+        myTimer()
+    }, 2000);
+});
+arrImg[1].addEventListener("click",function () {
     currentIndex = 2;
     myTimer();
     changeBorderColor(1);
-};
-arrImg[2].onclick = function () {
+    window.clearInterval(intervalID);
+    intervalID = window.setInterval(function () {
+        myTimer()
+    }, 2000);
+});
+arrImg[2].addEventListener("click",function () {
     currentIndex = 3;
     myTimer();
     changeBorderColor(2);
-};
+    window.clearInterval(intervalID);
+    intervalID = window.setInterval(function () {
+        myTimer()
+    }, 2000);
+});
 
 
 // ----- functions  --------
@@ -86,27 +98,27 @@ var ski = document.getElementById("resume-ski");
 
 menu_edu.style.backgroundColor = "#E83556";
 
-menu_edu.onclick = function () {
+menu_edu.addEventListener("click" ,function () {
     menu_edu.style.backgroundColor = "#E83556";
     menu_exp.style.backgroundColor = "#8B8B8B";
     menu_ski.style.backgroundColor = "#8B8B8B";
     edu.style.display = "block";
     exp.style.display = "none";
     ski.style.display = "none";
-}
-menu_exp.onclick = function () {
+});
+menu_exp.addEventListener("click",function () {
     menu_exp.style.backgroundColor = "#E83556";
     menu_edu.style.backgroundColor = "#8B8B8B";
     menu_ski.style.backgroundColor = "#8B8B8B";
     exp.style.display = "block";
     edu.style.display = "none";
     ski.style.display = "none";
-}
-menu_ski.onclick = function () {
+});
+menu_ski.addEventListener("click",function () {
     menu_ski.style.backgroundColor = "#E83556";
     menu_exp.style.backgroundColor = "#8B8B8B";
     menu_edu.style.backgroundColor = "#8B8B8B";
     ski.style.display = "block";
     exp.style.display = "none";
     edu.style.display = "none";
-}
+});

@@ -125,6 +125,11 @@ body {
     margin-left: 40px;
     border: 5px solid #eee;
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 1s;
+}
+#line img:hover{
+    opacity: 0.5;
 }
 
 #line_text {
@@ -201,6 +206,11 @@ body {
     text-align: center;
     background: #8B8B8B;
     margin-bottom: 40px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.circle:hover{
+    opacity: 0.5;
 }
 
 #resume a {
@@ -235,8 +245,17 @@ body {
     margin-right: 150px;
 }
 
-.hide {
+.hidden {
     display: none;
+}
+
+.unvisible {
+    opacity:0;
+    transition:opacity 1s linear;
+}
+.visible{
+    opacity:1;
+    transition:opacity 1s linear;
 }
 
 .resume-row {
