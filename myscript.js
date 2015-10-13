@@ -17,47 +17,42 @@ window.setInterval(function () {
     myTimer()
 }, 2000);
 
-//set onclick event to images
-arrImg[0].onclick = function () {
-    currentIndex = 1;
-    myTimer();
-    changeBorderColor(0);
-};
-arrImg[1].onclick = function () {
-    currentIndex = 2;
-    myTimer();
-    changeBorderColor(1);
-};
-arrImg[2].onclick = function () {
-    currentIndex = 3;
-    myTimer();
-    changeBorderColor(2);
-};
-
+//dynamically set onclick event to images
+for(var i = 0; i < arrImg.length; i++) {
+    arrImg[i].addEventListener('click', function (index) {
+       return function() {
+           currentIndex = index + 1;
+           myTimer();
+           changeBorderColor(index);
+       }
+    }(i));
+}
 
 // ----- functions  --------
-function myTimer() {
-    if (currentIndex === 0) {
-        imgMain.src = "images/avatar.jpg";
-        txtLine.innerHTML = "<p>Hello! a bit about me</p>";
-        changeBorderColor(-1);
-    } else if (currentIndex === 1) {
-        imgMain.src = "images/born.jpg";
-        txtLine.innerHTML = "<p>Born in 1983!</p>";
-        changeBorderColor(0);
-    } else if (currentIndex === 2) {
-        imgMain.src = "images/wedding.jpg";
-        txtLine.innerHTML = "<p>2011: Wedding with sweet love!</p>";
-        changeBorderColor(1);
-    } else {
-        imgMain.src = "images/father.jpg";
-        txtLine.innerHTML = "<p>2012: Became father</p>";
-        changeBorderColor(2);
+
+var data = {
+    '0': {
+        img: 'avatar.jpg',
+        text: '<p>Hello! a bit about me</p>'
+    },
+    '1': {
+        img: 'born.jpg',
+        text: '<p>Born in 1983!</p>'
+    },
+    '2': {
+        img: 'wedding.jpg',
+        text: '<p>2011: Wedding with sweet love!</p>'
+    },
+    '3': {
+        img: 'father.jpg',
+        text: '<p>2012: Became father</p>'
     }
-    currentIndex++;
-    if (currentIndex > 3) {
-        currentIndex = 0;
-    }
+}
+
+function myTimer(index) {
+    imgMain.src = data[index.toString()].img;
+    txtLine.innerHTML = data[index.toString()].text;
+    changeBorderColor(index - 1);
 }
 
 //change border color function
